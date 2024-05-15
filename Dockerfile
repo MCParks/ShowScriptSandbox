@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y wget
 WORKDIR /workspaces/minecraft-server
 
 # Download and set up the Paper 1.12.2 server
-RUN wget https://papermc.io/api/v1/paper/1.12.2/latest/download -O paperclip.jar
+RUN wget https://api.papermc.io/v2/projects/paper/versions/1.12.2/builds/1620/downloads/paper-1.12.2-1620.jar -O paperclip.jar
 RUN java -jar paperclip.jar --nogui
 
 # Accept the EULA
